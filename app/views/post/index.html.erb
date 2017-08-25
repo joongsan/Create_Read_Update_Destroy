@@ -15,8 +15,14 @@
             
     <% @read_post.each do |p| %>
         <div class="well container">
-            <h4>Title: </h4> <p> <%= p.title %></p>
-            <h4>Content: </h4> <p> <%= p.content %></p><a href="post/delete/<%= p.id %>"> [Delete]</a>
-            or <a href="post/find_update_post/<%= p.id %>"> [Update]</a>
+            <div class="titleAndIcons">
+                <h4> <%= p.title %></h4>
+                <div class="icons">
+                    <a href="post/delete/<%= p.id %>"><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 30px"></i></a>
+                    <a href="post/find_update_post/<%= p.id %>"> <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 30px"></i> </a>
+                </div>
+            </div>
+            <h5> <%= p.content %></h5>
+            
         </div>
     <% end %>
