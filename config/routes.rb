@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'post#index'
   post '/post/new' => 'post#new'
+  post '/post/update/:id' => 'post#update'
+  get '/post/find_update_post/:id' => 'post#find_update_post'
   get '/post/delete/:id' => 'post#delete'
 
   # Example of regular route:

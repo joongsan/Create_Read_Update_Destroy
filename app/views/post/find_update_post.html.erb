@@ -1,0 +1,13 @@
+<h1 align="center">Updating a Post</h1>
+        <div class="well container">
+            <form method="POST" action="/post/update/<%= @post.id %>">
+                    <label>Please modify "your" fancy and fun post !!</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="title" value="<%= @post.title %>">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" name="content"><%= @post.content %></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>

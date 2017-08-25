@@ -1,4 +1,5 @@
-<h1 align="center">Writing a Posts</h1>
+
+<h1 align="center">Writing a Post</h1>
         <div class="well container">
             <form method="POST" action="/post/new">
                     <label>Please write a fancy and fun post !!</label>
@@ -16,5 +17,6 @@
     <div class="well container">
         <h4>Title: </h4> <p> <%= p.title %></p>
         <h4>Content: </h4> <p> <%= p.content %></p><a href="post/delete/<%= p.id %>"> [Delete]</a>
+        or <a href="post/find_update_post/<%= p.id %>"> [Update]</a>
     </div>
 <% end %>
